@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" async></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Welcome to the number guessing game <span id="hot">Hot</span> or <span id="cold">Cold!</span></h1>
+        <label for="guess">Guess the number!</label><br>
+        <p>You currently have: <p id="turns">5</p> turns left.</p>
+        <input type="number" class="input" id="guess" name="guess" placeholder="50"><br>
+        <div id="increments">
+            <button class="dec" id="dec25"> -25 </button>
+            <button class="dec" id="dec10"> -10 </button>
+            <button class="dec" id="dec5"> -5 </button>
+            <button class="dec" id="dec1"> -1 </button>
+            <button class="inc" id="inc1"> +1 </button>
+            <button class="inc" id="inc5"> +5 </button>
+            <button class="inc" id="inc10"> +10 </button>
+            <button class="inc" id="inc25"> +25 </button>
+        </div> <br> 
+        <div id="grid">
+            <button class="buttons" id="submit">Submit</button>
+            <form>
+                    <button class="buttons" id="reset">Reset</button>
+            </form>
+        </div><br> <br>
+        <p id="message">Here's something to start you off: the number <strong>50</strong> as a free guess! </p>
+        <table id="data">
+            <tr>
+                <th>Your Guess: </th>
+                <th>Distance: </th>
+                <th>Temperature: </th>
+            </tr>
+            <tr id="first">
+                <td id="base1"></td>
+                <td id="base2"></td>
+                <td id="base3"></td>
+            </tr>
+            <tr id="second">
+                <td id="a1"></td>
+                <td id="a2"></td>
+                <td id="a3"></td>
+            </tr>
+            <tr id="third">
+                <td id="b1"></td>
+                <td id="b2"></td>
+                <td id="b3"></td>
+            </tr>
+            <tr id="fourth">
+                <td id="c1"></td>
+                <td id="c2"></td>
+                <td id="c3"></td>
+            </tr>
+            <tr id="fifth">
+                <td id="c1"></td>
+                <td id="c2"></td>
+                <td id="c3"></td>
+            </tr>
+            <tr id="sixth">
+                <td id="d1"></td>
+                <td id="d2"></td>
+                <td id="d3"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

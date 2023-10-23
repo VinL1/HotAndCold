@@ -1,0 +1,53 @@
+body{
+    text-align: center;
+    align-content: center;
+}
+h1{
+    font-family: monospace;
+}
+#hot{
+    color: red;
+}
+#cold{
+    color:blue;
+}
+label{
+    font-size: 32px;
+}
+.input{
+    margin: 32px;
+    width: 50%;
+    height: 20%;
+    font-size: 32px;
+}
+#turns{
+    font-family: monospace;
+    font-size: 32px;
+}
+#grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 10px;
+    margin: auto;
+    width: 50%;
+    height: 20px;
+}
+.buttons{
+    font-size: 32px;
+    margin: auto;
+    justify-content: center;
+}
+table, th, td {
+    border:1px solid black;
+    text-align: center;
+    width: 75%;
+    height: 20%;
+    margin: auto;
+    padding: 10px;
+}
+#message{
+    margin: 20px;
+}
+tr{
+    text-align: center;
+}
