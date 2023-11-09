@@ -13,22 +13,23 @@ function setValue(){
         alert("Enter a valid number between 1 - 100!");
         return;
     }
-    guess = num.value;
+
     distance = Math.abs(guess - number);
     turns --;
-    num.value = null;
+    addToTable(guess, distance, findTemp(guess));
     
     if (turns == 0) {
         alert("You ran out of turns! The number was: " + number + ".");
         num.disabled = true;
+        disableButtons();
         turna.innerHTML = 0;
     }else if(guess == number){
         alert("Congrats! You have correctly guessed the number. Please reset the page or press the reset button to continue playing!");
         num.disabled = true;
+        disableButtons();
         turna.innerHTML = 99999999;
     }else{
         turna.innerHTML = turns;
-        addToTable(guess, distance, findTemp(guess));
         document.getElementById("message").innerHTML = "Your guess was: " + distance + " away from the answer. " + findTemp(guess) + "!";
     }
 }
@@ -37,7 +38,7 @@ function addToTable(guess, distance, temperature){
     document.getElementById(row+1).innerText = guess;
     document.getElementById(row+2).innerText = distance;
     document.getElementById(row+3).innerText = temperature;
-    if (row != "d"){
+    if (row != "e"){
         let charCode = row.charCodeAt(0);
         charCode = (charCode - 97 + 1) % 26 + 97;
         row = String.fromCharCode(charCode);
@@ -90,7 +91,14 @@ for (let incredible = 0; incredible < arr.length; incredible++) {
     });
 
     document.getElementById("dec" + arr[incredible]).addEventListener("click", function() {
-        incrementGuess(-arr[incredible]);
+        incrementGuess(-1 * arr[incredible]);
     });
 }
 
+function disableButtons(){
+    for (let incredible = 0; incredible < arr.length; incredible++) {
+        document.getElementById("inc" + arr[incredible]).disabled = true;
+        document.getElementById("dec" + arr[incredible]).disabled = true;
+    }
+    sub.disabled = true;
+}
